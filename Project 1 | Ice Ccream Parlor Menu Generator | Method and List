@@ -1,0 +1,82 @@
+// Echavez, Andrea A. | BSCPE 1-1 | Ice Cream Parlor Menu Generator Project | C# \\
+
+using System;
+
+namespace IceCreamParlor
+{
+    class Program
+    {
+        static void Main()
+        {
+            string code = "1";
+
+            Console.WriteLine("ICE CREAM PARLOR MENU GENERATOR X BLACKPINK and Selena Gomez - 'ICE CREAM'");
+            Console.WriteLine("___________________________________________________________________________");
+            Console.Write("Enter 1 to start chillin': ");
+
+            string userInput = Console.ReadLine();
+
+            while (userInput != "0")
+            {
+                string result = userInput == code ? "correct" : "error";
+
+                if (result == "correct")
+                {
+                    Console.WriteLine("___________________________________________________________________________");
+                    Console.WriteLine("ICE CREAM CHILLIN' CHILLIN' ICE CREAM CHILLIN'");
+                    Console.WriteLine("Enter A - Selena");
+                    Console.WriteLine("Enter B - Jennie");
+                    Console.WriteLine("Enter C - Lisa");
+                    Console.WriteLine("Enter D - Jisoo");
+                    Console.WriteLine("Enter E - Rose");
+                    Console.WriteLine("Enter 0 to exit");
+                    Console.WriteLine("___________________________________________________________________________");
+                    Console.Write("Enter your choice: ");
+                    userInput = Console.ReadLine();
+
+                    switch (userInput)
+                    {
+                        case "A":
+                            SuggestedIceCream("SNICKER SUNDAE", "Chocolate Ice Cream, Hot fudge, Caramel, Spanish peanuts", "topped with whipped cream and cherry", "", "Imma make it better sip it like me a Slurpee ~Selena");
+                            break;
+                        case "B":
+                            SuggestedIceCream("TRIPPLE BERRY MARBLE", "Three layers of Vanilla ice cream, Strawberry, blueberry", "raspberries and topped with whipped cream and cherry", "", "Baby you deserve a treat ~Jennie");
+                            break;
+                        case "C":
+                            SuggestedIceCream("COOKIE MONSTER SUNDAE", "Two scoops each of Cookie Dough and Cookies 'N Cream ice cream", "topped with hot fudge, cookie dough bites, crushed Oreo, chocolate", "syrup, whipped cream, sprinkles, and a chocolate chip cookie", "Chillin' like a villain yeah ra ra ra ~Lisa");
+                            break;
+                        case "D":
+                            SuggestedIceCream("PEANUT BUTTER CUP", "Chocolate ice cream covered in a creamy peanut butter sauce, hot fudge,", "peanut butter cups topped with whipped cream and cherry", "",  "You're the cherry piece ~Jisoo");
+                            break;
+                        case "E":
+                            SuggestedIceCream("RASPBERRY FUDGE TORTE", "Raspberry Fudge Torte ice cream with hot fudge", "raspberries topped with whipped cream and cherry", "", "Good enough to eat ~Rose");
+                            break;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("___________________________________________________________________________");
+                    Console.Write("Enter 1 to continue or 0 to exit: ");
+                    userInput = Console.ReadLine();
+                }
+            }
+            
+            Console.WriteLine("");
+            Console.WriteLine("Thank you for trusting and visiting my Ice Cream");
+            Console.WriteLine("Parlor Menu Generator. Enjoy your Ice Cream!");
+            Console.WriteLine("~ Andrea Echavez");
+        }
+
+        static void SuggestedIceCream(string name, string description1, string description2, string description3, string lyricsandartist)
+        {
+            Console.WriteLine("___________________________________________________________________________");
+            Console.WriteLine(name);
+            Console.WriteLine("");
+            Console.WriteLine(description1);
+            Console.WriteLine(description2);
+            Console.WriteLine(description3);
+            Console.WriteLine("");
+            Console.WriteLine(lyricsandartist);
+        }
+    }
+}
